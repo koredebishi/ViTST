@@ -304,13 +304,21 @@ def construct_image(
         ImageDict_list = []
         demogr_lengths = []
 
-        base_path = '../'
-        split_path = '/splits/phy12_split' + str(split_idx+1) + '.npy'
-        idx_train, idx_val, idx_test = np.load(base_path + split_path, allow_pickle=True)
-        # extract train/val/test examples
-        Ptrain = Pdict_list[idx_train]
-        Pval = Pdict_list[idx_val]
-        Ptest = Pdict_list[idx_test]
+        # base_path = '../'
+        # split_path = '/splits/phy12_split' + str(split_idx+1) + '.npy'
+        # idx_train, idx_val, idx_test = np.load(base_path + split_path, allow_pickle=True)
+        # # extract train/val/test examples
+        # Ptrain = Pdict_list[idx_train]
+        # Pval = Pdict_list[idx_val]
+        # Ptest = Pdict_list[idx_test]
+
+        
+        # Since we are using 2 patients only, treat all data as training data
+        Ptrain = Pdict_list  # Use all patients as "training" for simplicity
+        Pval = []
+        Ptest = []
+
+
 
         # first round, find the mean and std for each param on training set
         train_ts_values = [[] for _ in range(num_ts_params)]

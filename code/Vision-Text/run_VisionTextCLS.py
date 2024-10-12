@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, '/mnt/raid0/zekun/ViTST/code')
+sys.path.insert(0, '/home/myid/krb84578/ViTST/code')
 import os
 
 import imp
