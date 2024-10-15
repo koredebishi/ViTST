@@ -2,7 +2,7 @@ import sys
 sys.path.insert(0, '/home/myid/krb84578/ViTST/code')
 import os
 
-import imp
+import importlib
 import argparse
 from random import seed
 import pandas as pd

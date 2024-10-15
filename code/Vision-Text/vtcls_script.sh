@@ -3,7 +3,7 @@
 # P12 dataset
 for dataset_prefix in order_differ_interpolation_-*1_**2_6*6_384*384_
 do
-CUDA_VISIBLE_DEVICES=1 python3 run_VisionTextCLS.py \
+CUDA_VISIBLE_DEVICES=0,1,2,3 python3 run_VisionTextCLS.py \
     --image_model swin \
     --text_model roberta \
     --freeze_vision_model False \
@@ -26,7 +26,7 @@ done
 # P19 dataset
 for dataset_prefix in order_differ_interpolation_-*1_**2_6*6_384*384_
 do
-CUDA_VISIBLE_DEVICES=1 python3 run_VisionTextCLS.py \
+CUDA_VISIBLE_DEVICES=0,1,2,3 python3 run_VisionTextCLS.py \
     --image_model swin \
     --text_model roberta \
     --freeze_vision_model False \
